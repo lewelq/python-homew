@@ -7,7 +7,7 @@ a = [first + (i-1) * razn for i in range(1, count+1)]
 
 print("Арифметическая прогрессия:", a)'''
 #32
-progression = [1, 3, 5, 7, 9, 11, 13, 15]
+progression = [4, 7, 564, 4544, 10000]
 minn = int(input("Минимальное значение диапазона: "))
 maxx = int(input("Максимальное значение диапазона: "))
 
