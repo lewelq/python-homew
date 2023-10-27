@@ -38,7 +38,7 @@ def rec(direct, parent_dir = ''):
         if os.path.isdir(dir_path): #если директория
             file_attributes.append("directory")
 
-            size = get_directory_size(dir_path) #определение размера директории
+            size = directory_size(dir_path) #определение размера директории
             file_attributes.append(size) #размер директории
 
             rec(dir_path, dir_path) #рекурсивный вызов для вложенной директории
@@ -66,12 +66,12 @@ def rec(direct, parent_dir = ''):
         with open('dz8/abc.pickle', 'ab') as p:
             pickle.dump(files_dict, p)
 
-def get_directory_size(directory):
+def directory_size(directory):
     total_size = 0
     for path, names, files in os.walk(directory):
-        for f in files:
-            fp = os.path.join(path, f)
-            total_size += os.path.getsize(fp)
+        for file in files:
+            file_path = os.path.join(path, file)
+            total_size += os.path.getsize(file_path)
     return total_size
 
 rec('dz8/rand')
