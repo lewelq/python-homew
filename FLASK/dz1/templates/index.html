@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="header_menu">
+            <li><a href="/clothes/">Одежда</a></li>
+            <li><a href="/shoes/">Обувь</a></li>
+            <li><a href="/kurtka/">Куртка</a></li>
+        </div>
+    </header>
+    <section>
+        {% block content %}
+            Lorem ipsum dolor sit amet.
+        {% endblock %}
+    </section>
+
+    <footer>
+        <p class="footer_text">ПОДВАЛ...</p>
+    </footer>
+</body>
+</html>
