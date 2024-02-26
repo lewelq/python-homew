@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        {% for user in users %}
+            <p>Имя пользователя: {{ user.username }} <br>
+            Email пользователя: {{ user.email }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

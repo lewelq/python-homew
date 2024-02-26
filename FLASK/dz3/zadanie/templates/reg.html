@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="{{ url_for('register') }}">
+        {{ form.csrf_token() }}
+        <p>
+            {{ form.name.label }}
+            {{ form.name(size=32) }}
+        </p>
+        <p>
+            {{ form.surname.label }}
+            {{ form.surname(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+            {{ form.password.label }}
+            {{ form.password(size=32) }}
+        </p>
+        <p>
+            <input type="submit" value="Login">
+        </p> 
+    </form>
+</body>
+</html>
